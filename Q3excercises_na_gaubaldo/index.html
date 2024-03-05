@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="random"></p>
+    <p id="num"></p>
+    <p id="date"></p>
+   
+    <script>
+    
+    var random = Math.floor(Math.random() * 1001);
+        document.getElementById("random").innerHTML = "Random number generated: " + random;
+
+        if (random <=100)
+        {
+            var num1 = random.toString().charAt(0); 
+            num1 = parseInt(num1) * 10; 
+
+            var num2 = random.toString().charAt(1); 
+            num2 = parseInt(num2) * 1; 
+
+            document.getElementById("num").innerHTML = "Breakdown: " + num1 + " " + num2;
+
+            var date = new Date(2024, 2, 6);
+            document.getElementById("date").innerHTML = date;
+        }
+        else if (random <= 1000) {
+            var num1 = random.toString().charAt(0); 
+            num1 = parseInt(num1) * 100; 
+
+            var num2 = random.toString().charAt(1); 
+            num2 = parseInt(num2) * 10; 
+
+            var num3 = random.toString().charAt(2); 
+            num3 = parseInt(num3) * 1; 
+
+
+            document.getElementById("num").innerHTML = "Breakdown: " + num1 + " " + num2 + " " + num3;
+
+            var date = new Date(2024, 2, 6);
+            document.getElementById("date").innerHTML = date;    
+        }
+        else {
+            
+            document.getElementById("num").innerHTML = " Breakdown: " + random;
+            var date = new Date(2024, 2, 6);
+            document.getElementById("date").innerHTML = date;
+        }
+    </script>
+</body>
+</html>
